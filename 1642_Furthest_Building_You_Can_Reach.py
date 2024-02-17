@@ -10,12 +10,12 @@ import heapq
 class Solution:
     def furthestBuilding(self, heights: List[int], bricks: int, ladders: int) -> int:
         heap = []
-        for i in range(len(heights) - 1):
+        for i in range(len(heights) - 1):                                                                 
             diff = heights[i+1] - heights[i]
             if diff > 0:
-                heapq.heappush(heap, diff)
+                heapq.heappush(heap, diff)                                                 # Will push the difference in the heap                                                    
             if len(heap) > ladders:
-                bricks -= heapq.heappop(heap)
+                bricks -= heapq.heappop(heap)                                              # Will subtract the lower difference from the heap
             if bricks < 0:
                 return i
         return len(heights) - 1
