@@ -2,7 +2,6 @@
 
 # An integer n is a power of two, if there exists an integer x such that n == 2x.
 
-import math
 
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
