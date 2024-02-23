@@ -11,8 +11,6 @@
 # Return the label of the town judge if the town judge exists and can be identified, or return -1 otherwise.
 
 
-
-
 class Solution:
     def findJudge(self, N: int, trust: List[List[int]]) -> int:
         in_degree = [0] * (N + 1)
